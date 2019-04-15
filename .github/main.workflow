@@ -2,6 +2,7 @@ workflow "Build It, Run It, Submit a Ticket" {
     on = "push"
     resolves = "Issue"
 }
+
 action "Issue" {
     needs = ["Nit-The-CodeTogether", "Nit-from-Gist"]
     uses = "swinton/httpie.action@master"
